@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+header{
+    background-color: #2F2F2F;
+    padding: 1.5rem;
+    color: aliceblue;
+}
+body{
+    background-color: #2F2F2F;
+    height: 100vh;
+}
+h1{
+    color: aliceblue;
+    font-size: 3rem;
+}
+.container-menu{
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    padding-bottom: 13rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.container-btn-principales{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 5.5rem;
+}
+.container-btn-principales a{
+    background-color: #4CAF50;     
+    color: white;               
+    border: none;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+.container-btn-principales a:hover{
+    background-color: #45a049;  
+}
+
+
+
+
+/* Alta */
+
+.container-form{
+    background-color: #CED4DA;
+    width: 41rem;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-form h1{
+    color: #2F2F2F;
+    margin-bottom: 2rem;
+}
+.container-inputs-alta{
+    display: flex;
+    margin: auto;
+    gap: 3rem;
+    margin-top: 1rem;
+    color:  #2F2F2F;
+}
+
+.form-alta label{
+    margin-right: 0.5rem;
+}
+.form-alta input[type="submit"]{
+    width: 10rem;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    background-color: #343A40;  
+    color: #ffffff;            
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.container-btn-enviar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
