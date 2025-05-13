@@ -3,7 +3,7 @@
         <h1>Selecciona que quieras dar de alta</h1>
         <div class="container-btn-principales">
             <div>
-                <a href="">Par Amo-Mascota</a>
+                <a href="<?= site_url("pantallaParAmoMascota") ?>">Par Amo-Mascota</a>
             </div>
             <div>
                 <a href="<?= site_url("pantallaAmoAlta") ?>">Amo</a>

@@ -58,7 +58,7 @@ h1{
 
 .container-form{
     background-color: #CED4DA;
-    width: 41rem;
+    width: 45rem;
     border-radius: 1rem;
     margin: auto;
     padding: 2rem;
@@ -83,7 +83,7 @@ h1{
 }
 .form-alta input[type="submit"]{
     width: 10rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding: 0.5rem;
     background-color: #343A40;  
     color: #ffffff;            
@@ -99,4 +99,134 @@ h1{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+}
+
+
+/* Mostrar Mascotas */
+
+.container-mostra-amos{
+    display: flex;
+    height: 80vh;
+}
+
+.seleccion{
+    background-color: #CED4DA;
+    width: 45%;
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    box-sizing: content-box;
+}
+
+.seleccion select{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+}
+
+.seleccion input[type = "submit"]{
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.tabla-datos-amos{
+    background-color: #45a049;
+    width: 100%  
+}
+.container-datos{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+}
+
+
+.registros{
+    
+    background-color: #fff;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.registros , .encabezado{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.registros p , .encabezado p{
+flex: 1; /* o podés usar flex-basis: 150px */
+  text-align: center;
+}
+
+.tabla-datos-amos{
+    padding: 1rem;
+}
+
+
+
+
+.container-inputs-baja{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1.5rem;
+}
+
+.container-inputs-baja input[type="submit"]{
+    margin: 0;
+}
+
+
+
+.container-tabla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    gap: 3rem;
+}
+
+.tabla{
+    width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.form-modificar input[type = "submit"]{
+
+    margin: 0;
+    
 }

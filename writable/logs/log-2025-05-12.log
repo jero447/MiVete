@@ -1,0 +1,921 @@
+ERROR - 2025-05-12 00:18:58 --> mysqli_sql_exception: Unknown column 'mascotas.fecha' in 'field list' in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `mascota...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mascota...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mascota...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mascota...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerMascotasPorAmo('3')
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+#7 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+#8 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-12 00:18:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mascotas.fecha' in 'field list'
+[Method: POST, Route: buscarMascotas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mascotas`.`idMascotas`, `mascotas`.`nombre`, `mascotas`.`especie`, `mascotas`.`raza`, `mascotas`.`nroRegistro`, `mascotas`.`edad`, `mascotas`.`fecha`
+FROM `amo_mascotas`
+JOIN `mascotas` ON `mascotas`.`idMascotas` = `amo_mascotas`.`idMascota`
+WHERE `amo_mascotas`.`idAmo` = :amo_mascotas.idAmo:', [...], false)
+ 2 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerMascotasPorAmo('3')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:18:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mascotas.fecha' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mascotas`.`idMascotas`, `mascotas`.`nombre`, `mascotas`.`especie`, `mascotas`.`raza`, `mascotas`.`nroRegistro`, `mascotas`.`edad`, `mascotas`.`fecha`
+FROM `amo_mascotas`
+JOIN `mascotas` ON `mascotas`.`idMascotas` = `amo_mascotas`.`idMascota`
+WHERE `amo_mascotas`.`idAmo` = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mascotas`.`idMascotas`, `mascotas`.`nombre`, `mascotas`.`especie`, `mascotas`.`raza`, `mascotas`.`nroRegistro`, `mascotas`.`edad`, `mascotas`.`fecha`
+FROM `amo_mascotas`
+JOIN `mascotas` ON `mascotas`.`idMascotas` = `amo_mascotas`.`idMascota`
+WHERE `amo_mascotas`.`idAmo` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mascotas`.`idMascotas`, `mascotas`.`nombre`, `mascotas`.`especie`, `mascotas`.`raza`, `mascotas`.`nroRegistro`, `mascotas`.`edad`, `mascotas`.`fecha`
+FROM `amo_mascotas`
+JOIN `mascotas` ON `mascotas`.`idMascotas` = `amo_mascotas`.`idMascota`
+WHERE `amo_mascotas`.`idAmo` = :amo_mascotas.idAmo:', [...], false)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerMascotasPorAmo('3')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:18:58 --> [Caused by] mysqli_sql_exception: Unknown column 'mascotas.fecha' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `mascotas`.`idMascotas`, `mascotas`.`nombre`, `mascotas`.`especie`, `mascotas`.`raza`, `mascotas`.`nroRegistro`, `mascotas`.`edad`, `mascotas`.`fecha`
+FROM `amo_mascotas`
+JOIN `mascotas` ON `mascotas`.`idMascotas` = `amo_mascotas`.`idMascota`
+WHERE `amo_mascotas`.`idAmo` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mascotas`.`idMascotas`, `mascotas`.`nombre`, `mascotas`.`especie`, `mascotas`.`raza`, `mascotas`.`nroRegistro`, `mascotas`.`edad`, `mascotas`.`fecha`
+FROM `amo_mascotas`
+JOIN `mascotas` ON `mascotas`.`idMascotas` = `amo_mascotas`.`idMascota`
+WHERE `amo_mascotas`.`idAmo` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mascotas`.`idMascotas`, `mascotas`.`nombre`, `mascotas`.`especie`, `mascotas`.`raza`, `mascotas`.`nroRegistro`, `mascotas`.`edad`, `mascotas`.`fecha`
+FROM `amo_mascotas`
+JOIN `mascotas` ON `mascotas`.`idMascotas` = `amo_mascotas`.`idMascota`
+WHERE `amo_mascotas`.`idAmo` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mascotas`.`idMascotas`, `mascotas`.`nombre`, `mascotas`.`especie`, `mascotas`.`raza`, `mascotas`.`nroRegistro`, `mascotas`.`edad`, `mascotas`.`fecha`
+FROM `amo_mascotas`
+JOIN `mascotas` ON `mascotas`.`idMascotas` = `amo_mascotas`.`idMascota`
+WHERE `amo_mascotas`.`idAmo` = :amo_mascotas.idAmo:', [...], false)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerMascotasPorAmo('3')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:21:12 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 12.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 4 APPPATH\Controllers\Mostrar.php(40): view('mostrar/mascotasMostrar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-12 00:27:55 --> mysqli_sql_exception: Unknown column 'amo.direccion' in 'field list' in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `amos`.`...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `amos`.`...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `amos`.`...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `amos`.`...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerAmosPorMascotas(NULL)
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+#7 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+#8 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-12 00:27:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'amo.direccion' in 'field list'
+[Method: POST, Route: buscarMascotas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` IS NULL', [], false)
+ 2 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerAmosPorMascotas(null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:27:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'amo.direccion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` IS NULL')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` IS NULL', [], false)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerAmosPorMascotas(null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:27:55 --> [Caused by] mysqli_sql_exception: Unknown column 'amo.direccion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` IS NULL', [], false)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerAmosPorMascotas(null)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-12 00:28:00 --> mysqli_sql_exception: Unknown column 'amo.direccion' in 'field list' in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `amos`.`...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `amos`.`...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `amos`.`...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `amos`.`...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerAmosPorMascotas('1')
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+#7 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+#8 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-12 00:28:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'amo.direccion' in 'field list'
+[Method: POST, Route: buscarMascotas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` = :amo_mascotas.idMascota:', [...], false)
+ 2 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerAmosPorMascotas('1')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:28:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'amo.direccion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` = :amo_mascotas.idMascota:', [...], false)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerAmosPorMascotas('1')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:28:00 --> [Caused by] mysqli_sql_exception: Unknown column 'amo.direccion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `amos`.`idAmo`, `amos`.`nombre`, `amo`.`direccion`, `amo`.`telefono`
+FROM `amo_mascotas`
+JOIN `amos` ON `amos`.`idAmo` = `amo_mascotas`.`idAmo`
+WHERE `amo_mascotas`.`idMascota` = :amo_mascotas.idMascota:', [...], false)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Mostrar.php(37): App\Models\RelacionAmoMascotaModel->obtenerAmosPorMascotas('1')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:31:01 --> ErrorException: Undefined variable $amosEncontrados
+[Method: GET, Route: pantallaMascotaMostrar]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 27.
+ 1 APPPATH\Views\mostrar\mascotasMostrar.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amosEncontrados', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(31): view('mostrar/mascotasMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:31:05 --> ErrorException: Undefined variable $amosEncontrados
+[Method: GET, Route: pantallaMascotaMostrar]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 27.
+ 1 APPPATH\Views\mostrar\mascotasMostrar.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amosEncontrados', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(31): view('mostrar/mascotasMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 00:31:10 --> ErrorException: Undefined variable $amosEncontrados
+[Method: GET, Route: pantallaMascotaMostrar]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 27.
+ 1 APPPATH\Views\mostrar\mascotasMostrar.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amosEncontrados', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(31): view('mostrar/mascotasMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 01:10:44 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 28.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 4 APPPATH\Controllers\Mostrar.php(40): view('mostrar/mascotasMostrar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:11:10 --> ErrorException: Undefined variable $mascotas
+[Method: GET, Route: pantallaAmoMostrar]
+in APPPATH\Views\mostrar\amosMostrar.php on line 11.
+ 1 APPPATH\Views\mostrar\amosMostrar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mascotas', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(36): view('mostrar/amosMostrar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:22:54 --> ErrorException: Undefined variable $idAmoSeleccionado
+[Method: GET, Route: pantallaAmoMostrar]
+in APPPATH\Views\mostrar\amosMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\amosMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAmoSeleccionado', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(36): view('mostrar/amosMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:23:38 --> ErrorException: Undefined variable $idAmoSeleccionado
+[Method: GET, Route: pantallaAmoMostrar]
+in APPPATH\Views\mostrar\amosMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\amosMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAmoSeleccionado', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(36): view('mostrar/amosMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:23:40 --> ErrorException: Undefined variable $idAmoSeleccionado
+[Method: GET, Route: pantallaAmoMostrar]
+in APPPATH\Views\mostrar\amosMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\amosMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAmoSeleccionado', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(36): view('mostrar/amosMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:23:42 --> ErrorException: Undefined variable $idAmoSeleccionado
+[Method: GET, Route: pantallaAmoMostrar]
+in APPPATH\Views\mostrar\amosMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\amosMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAmoSeleccionado', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(36): view('mostrar/amosMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:24:48 --> ErrorException: Undefined variable $idAmoSeleccionado
+[Method: GET, Route: pantallaAmoMostrar]
+in APPPATH\Views\mostrar\amosMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\amosMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAmoSeleccionado', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(36): view('mostrar/amosMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:24:51 --> ErrorException: Undefined variable $idMascotaSeleccionada
+[Method: GET, Route: pantallaMascotaMostrar]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\mascotasMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idMascotaSeleccionada', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(31): view('mostrar/mascotasMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:24:54 --> ErrorException: Undefined variable $idMascotaSeleccionada
+[Method: GET, Route: pantallaMascotaMostrar]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\mascotasMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idMascotaSeleccionada', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(31): view('mostrar/mascotasMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:27:02 --> ErrorException: Undefined variable $idMascotaSeleccionada
+[Method: GET, Route: pantallaMascotaMostrar]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\mascotasMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idMascotaSeleccionada', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(31): view('mostrar/mascotasMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:27:08 --> ErrorException: Undefined variable $idMascotaSeleccionada
+[Method: GET, Route: pantallaMascotaMostrar]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\mascotasMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idMascotaSeleccionada', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(31): view('mostrar/mascotasMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 14:28:51 --> ErrorException: Undefined variable $idAmoSeleccionado
+[Method: GET, Route: pantallaAmoMostrar]
+in APPPATH\Views\mostrar\amosMostrar.php on line 12.
+ 1 APPPATH\Views\mostrar\amosMostrar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAmoSeleccionado', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(36): view('mostrar/amosMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 15:13:46 --> ErrorException: Undefined variable $amos
+[Method: GET, Route: pantallaParAmoMascotaBaja]
+in APPPATH\Views\baja\relacionAmoMascotaBaja.php on line 11.
+ 1 APPPATH\Views\baja\relacionAmoMascotaBaja.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\relacionAmoMascotaBaja.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\relacionAmoMascotaBaja.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('baja/relacionAmoMascotaBaja', [], true)
+ 5 APPPATH\Controllers\Baja.php(30): view('baja/relacionAmoMascotaBaja')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->pantallaParAmoMascotaBaja()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 15:56:22 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: insertarParAmoMascota]
+in SYSTEMPATH\BaseModel.php on line 1014.
+ 1 SYSTEMPATH\BaseModel.php(1014): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Models\MascotaModel.php(30): CodeIgniter\Model->update('1', [...])
+ 4 APPPATH\Controllers\Alta.php(107): App\Models\MascotaModel->insertarAmoActual('1', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-12 17:47:46 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mi_veterinaria`.`amo_mascotas`, CONSTRAINT `fk_amo` FOREIGN KEY (`idAmo`) REFERENCES `amos` (`idAmo`)) in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `am...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Topicos\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota(Array)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+#11 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-12 17:47:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`mi_veterinaria`.`amo_mascotas`, CONSTRAINT `fk_amo` FOREIGN KEY (`idAmo`) REFERENCES `amos` (`idAmo`))
+[Method: POST, Route: insertarParAmoMascota]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 17:47:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`mi_veterinaria`.`amo_mascotas`, CONSTRAINT `fk_amo` FOREIGN KEY (`idAmo`) REFERENCES `amos` (`idAmo`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'3\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'3\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 17:47:46 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mi_veterinaria`.`amo_mascotas`, CONSTRAINT `fk_amo` FOREIGN KEY (`idAmo`) REFERENCES `amos` (`idAmo`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-12 19:09:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mi_veterinaria`.`amo_mascotas`, CONSTRAINT `fk_amo` FOREIGN KEY (`idAmo`) REFERENCES `amos` (`idAmo`)) in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `am...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Topicos\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota(Array)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+#11 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-12 19:09:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`mi_veterinaria`.`amo_mascotas`, CONSTRAINT `fk_amo` FOREIGN KEY (`idAmo`) REFERENCES `amos` (`idAmo`))
+[Method: POST, Route: insertarParAmoMascota]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 19:09:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`mi_veterinaria`.`amo_mascotas`, CONSTRAINT `fk_amo` FOREIGN KEY (`idAmo`) REFERENCES `amos` (`idAmo`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 19:09:37 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mi_veterinaria`.`amo_mascotas`, CONSTRAINT `fk_amo` FOREIGN KEY (`idAmo`) REFERENCES `amos` (`idAmo`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-12 20:17:53 --> mysqli_sql_exception: Duplicate entry '3-4' for key 'uq_amo_mascota' in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `am...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Topicos\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota(Array)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+#11 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-12 20:17:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3-4' for key 'uq_amo_mascota'
+[Method: POST, Route: insertarParAmoMascota]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:17:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '3-4' for key 'uq_amo_mascota'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'3\', \'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'3\', \'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:17:53 --> [Caused by] mysqli_sql_exception: Duplicate entry '3-4' for key 'uq_amo_mascota'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'3\', \'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'3\', \'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'3\', \'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:19:42 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\BaseModel.php on line 1834.
+ 1 SYSTEMPATH\BaseModel.php(1834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(1000): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Baja.php(52): App\Models\RelacionAmoMascotaModel->actualizarRelacionAmoMascota([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:22:56 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\BaseModel.php on line 1834.
+ 1 SYSTEMPATH\BaseModel.php(1834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(1000): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Baja.php(52): App\Models\RelacionAmoMascotaModel->actualizarRelacionAmoMascota([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:24:00 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\BaseModel.php on line 1834.
+ 1 SYSTEMPATH\BaseModel.php(1834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(1000): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Baja.php(52): App\Models\RelacionAmoMascotaModel->actualizarRelacionAmoMascota([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:28:05 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\BaseModel.php on line 1834.
+ 1 SYSTEMPATH\BaseModel.php(1834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(1000): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(50): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Baja.php(52): App\Models\RelacionAmoMascotaModel->actualizarRelacionAmoMascota([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:29:05 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\BaseModel.php on line 1834.
+ 1 SYSTEMPATH\BaseModel.php(1834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(1000): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(52): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Baja.php(52): App\Models\RelacionAmoMascotaModel->actualizarRelacionAmoMascota([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:32:12 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\BaseModel.php on line 1834.
+ 1 SYSTEMPATH\BaseModel.php(1834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(1000): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(52): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Baja.php(52): App\Models\RelacionAmoMascotaModel->actualizarRelacionAmoMascota([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 20:38:30 --> TypeError: CodeIgniter\Database\BaseBuilder::getOperatorFromWhereKey(): Argument #1 ($whereKey) must be of type string, int given, called in C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php on line 781
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3495.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(781): CodeIgniter\Database\BaseBuilder->getOperatorFromWhereKey(0)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(722): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', [...], null, 'AND ', true)
+ 3 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->where([...])
+ 4 APPPATH\Models\RelacionAmoMascotaModel.php(24): CodeIgniter\Model->__call('where', [...])
+ 5 APPPATH\Controllers\Baja.php(52): App\Models\RelacionAmoMascotaModel->obtenerRelacionAmoMascota('7', '3')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 21:16:52 --> ErrorException: Undefined variable $mascotaAcutualizar
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in APPPATH\Controllers\Baja.php on line 63.
+ 1 APPPATH\Controllers\Baja.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mascotaAcutualizar', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Controllers\\Baja.php', 63)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-12 21:17:45 --> mysqli_sql_exception: Duplicate entry '2-9' for key 'uq_amo_mascota' in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `am...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Topicos\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota(Array)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+#11 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-12 21:17:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2-9' for key 'uq_amo_mascota'
+[Method: POST, Route: insertarParAmoMascota]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 21:17:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2-9' for key 'uq_amo_mascota'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'9\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'9\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 21:17:45 --> [Caused by] mysqli_sql_exception: Duplicate entry '2-9' for key 'uq_amo_mascota'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'9\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'9\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'9\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-12 21:21:03 --> mysqli_sql_exception: Duplicate entry '2-12' for key 'uq_amo_mascota' in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `am...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Topicos\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota(Array)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+#11 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-12 21:21:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2-12' for key 'uq_amo_mascota'
+[Method: POST, Route: insertarParAmoMascota]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 21:21:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2-12' for key 'uq_amo_mascota'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-12 21:21:03 --> [Caused by] mysqli_sql_exception: Duplicate entry '2-12' for key 'uq_amo_mascota'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

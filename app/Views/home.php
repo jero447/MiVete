@@ -6,13 +6,13 @@
                 <a href="<?= site_url("seleccionAlta") ?>">Dar de alta</a>
             </div>
             <div>
-                <a href="">Dar de baja</a>
+                <a href="<?= site_url("seleccionBaja") ?>">Dar de baja</a>
             </div>
             <div>
-                <a href="">Modificar</a>
+                <a href="<?= site_url("pantallaEleccionModificar") ?>">Modificar</a>
             </div>
             <div>
-                <a href="">Mostrar</a>
+                <a href="<?= site_url("pantallaEleccionMostrar") ?>">Mostrar</a>
             </div>
         </div>
     </div>

@@ -20,4 +20,22 @@ class AmoModel extends Model
 
     }
 
+    public function obtenerAmosPorId($idAmo){
+
+        return $this->where("idAmo", $idAmo)->first();
+
+    }
+
+    public function obtenerAmos(){
+        
+        return $this->findAll();
+
+    }
+
+    public function actualizarAmo($idAmo, $data){
+        return $this->update($idAmo,$data);
+    }
+
+    
+
 }

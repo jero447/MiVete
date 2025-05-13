@@ -9,4 +9,6 @@ class Home extends BaseController
         echo view("layouts/head");
         echo view("home");
     }
+    
+
 }

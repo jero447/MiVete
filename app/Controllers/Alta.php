@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\AmoModel;
 use App\Models\MascotaModel;
 use App\Models\VeterinarioModel;
+use App\Models\RelacionAmoMascotaModel;
 
 class Alta extends BaseController
 {
@@ -13,12 +14,14 @@ class Alta extends BaseController
     protected $modelAmo;
     protected $modelMascota;
     protected $modelVeterinario;
+    protected $modelParAmoMascota;
 
 
     public function __construct() {
         $this->modelAmo = new AmoModel();
         $this->modelMascota = new MascotaModel();
         $this->modelVeterinario = new VeterinarioModel();
+        $this->modelParAmoMascota = new RelacionAmoMascotaModel();
     }
 
     public function seleccionAlta(){
@@ -41,6 +44,11 @@ class Alta extends BaseController
         echo view("alta/veterinarioAlta");
     }
 
+    public function pantallaParAmoMascotaAlta(){
+        echo view("layouts/head");
+        echo view("alta/relacionAmoMascotaAlta", [ "amos" => $this->modelAmo->obtenerAmos(), "mascotas" => $this->modelMascota->obtenerMascotas() ]);
+    }
+
 
     public function insertarAmo(){
         
@@ -49,7 +57,6 @@ class Alta extends BaseController
             "apellido" => $this->request->getPost("apellido"),
             "direccion" => $this->request->getPost("direccion"),
             "telefono" => $this->request->getPost("telefono"),
-            "fechaAlta" => $this->request->getPost("fecha_de_alta")
         ];
 
         $this->modelAmo->insertarAmo($data);
@@ -66,7 +73,6 @@ class Alta extends BaseController
             "raza" => $this->request->getPost("raza"),
             "nroRegistro" => $this->request->getPost("nro_registro"),
             "edad" => $this->request->getPost("edad"),
-            "fechaAlta" => $this->request->getPost("fecha_de_alta")
         ];
 
         $this->modelMascota->insertarMascota($data);
@@ -79,14 +85,28 @@ class Alta extends BaseController
         $data = [
             "nombre" => $this->request->getPost("nombre"),
             "especialidad" => $this->request->getPost("especialidad"),
-            "telefono" => $this->request->getPost("telefono"),
-            "fechaIngreso" => $this->request->getPost("fecha_de_ingreso")
+            "telefono" => $this->request->getPost("telefono")
         ];
 
         $this->modelVeterinario->insertarVeterinario($data);
         return redirect()->to("/");
 
     }
+    
+    public function insertarParAmoMascota(){
+        $data = [
+            "idAmo" => $this->request->getPost("amos"),
+            "idMascota" => $this->request->getPost("mascotas")
+        ];
+        
+        $amoActual = [
+            "amoActual" => $data["idAmo"]
+        ];
 
+        $this->modelParAmoMascota->insertarRelacionAmoMascota($data);
+        $this->modelMascota->actualizarMascota($data["idMascota"], $amoActual);
+        return redirect()->to("/");
+
+    }
 
 }
