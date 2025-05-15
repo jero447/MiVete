@@ -230,3 +230,21 @@ th, td {
     margin: 0;
     
 }
+
+.container-error{
+    display: flex;
+    flex-direction: column;
+}
+
+.mensajeError{
+    font-size: 13px;
+    color: red;
+}
+
+.container-input{
+    display: flex;
+}
+
+.inputForm{
+    max-width: 10rem;
+}

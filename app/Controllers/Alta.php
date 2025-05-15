@@ -59,6 +59,15 @@ class Alta extends BaseController
             "telefono" => $this->request->getPost("telefono"),
         ];
 
+        if (!$this->modelAmo->validate($data)){
+                
+            return view("layouts/head")
+            . view("alta/amoAlta", [
+                "errors" => $this->modelAmo->errors(),
+                "datos" => $data
+            ]);
+        }
+
         $this->modelAmo->insertarAmo($data);
         return redirect()->to("/");
 
@@ -75,6 +84,15 @@ class Alta extends BaseController
             "edad" => $this->request->getPost("edad"),
         ];
 
+        if (!$this->modelMascota->validate($data)){
+                
+            return view("layouts/head")
+            . view("alta/mascotaAlta", [
+                "errors" => $this->modelMascota->errors(),
+                "datos" => $data
+            ]);
+        }
+
         $this->modelMascota->insertarMascota($data);
         return redirect()->to("/");
 
@@ -87,6 +105,15 @@ class Alta extends BaseController
             "especialidad" => $this->request->getPost("especialidad"),
             "telefono" => $this->request->getPost("telefono")
         ];
+
+
+        if (!$this->modelVeterinario->validate($data)) {
+            return view("layouts/head")
+                . view("alta/veterinarioAlta", [
+                    "errors" => $this->modelVeterinario->errors(),
+                    "datos" => $data
+                ]);
+        }
 
         $this->modelVeterinario->insertarVeterinario($data);
         return redirect()->to("/");
@@ -103,10 +130,26 @@ class Alta extends BaseController
             "amoActual" => $data["idAmo"]
         ];
 
+        
+        if (!$this->modelParAmoMascota->validate($data)) {
+            return view("layouts/head")
+                . view("alta/relacionAmoMascotaAlta", [
+                    "errors" => $this->modelParAmoMascota->errors(),
+                    "datos" => $data,
+                    "amos" => $this->modelAmo->obtenerAmos(), 
+                    "mascotas" => $this->modelMascota->obtenerMascotas() 
+                ]);
+        }
+
+
         $this->modelParAmoMascota->insertarRelacionAmoMascota($data);
         $this->modelMascota->actualizarMascota($data["idMascota"], $amoActual);
         return redirect()->to("/");
 
     }
+
+
+    
+
 
 }

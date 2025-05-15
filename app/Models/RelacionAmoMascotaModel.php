@@ -14,6 +14,22 @@ class RelacionAmoMascotaModel extends Model
     protected $allowedFields    = ["idAmo","idMascota","fechaInicio","fechaFin","motivoFin"];
 
 
+    protected $validationRules = [
+    'idAmo' => 'required',
+    'idMascota' => 'required',
+    ];
+    
+    protected $validationMessages = [
+        'idAmo' => [
+            'required' => 'Debe seleccionar un amo.',
+        ],
+        'idMascota' => [
+            'required' => 'Debe seleccionar una mascota.',
+        ],
+    ];
+
+    
+
     public function insertarRelacionAmoMascota($data){
 
         return $this->insert($data);
