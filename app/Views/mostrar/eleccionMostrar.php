@@ -1,6 +1,7 @@
-<div class="container-datos">
-    <h1>Mostrar Datos</h1>
-    <div class="container-btn-principales">
+
+<div class="container-menu">
+        <h1>Mostrar Datos</h1>
+        <div class="container-btn-principales">
             <div>
                 <a href="<?= site_url("amosMostrar") ?>">Amos</a>
             </div>

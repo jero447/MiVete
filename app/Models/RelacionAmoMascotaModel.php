@@ -43,7 +43,7 @@ class RelacionAmoMascotaModel extends Model
     public function obtenerAmosPorMascotas($idMascota){
 
         $builder = $this->db->table('amo_mascotas');
-        $builder->select("amos.idAmo, amos.nombre, amos.direccion, amos.telefono");
+        $builder->select("amos.idAmo, amos.nombre, amos.direccion, amos.telefono, amos.fechaAlta");
         $builder->join("amos", "amos.idAmo = amo_mascotas.idAmo");
         $builder->where("amo_mascotas.idMascota", $idMascota);
         $query = $builder->get();

@@ -1,7 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -11,33 +11,55 @@ header{
     color: aliceblue;
 }
 body{
-    background-color: #2F2F2F;
+    background-color: #7A93AC;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 h1{
     color: aliceblue;
     font-size: 3rem;
 }
+
+.titulosSecciones{
+    width: 60rem;
+    text-decoration: underline;
+}
+
 .container-menu{
     width: 40%;
-    height: 100%;
-    margin: auto;
-    padding-bottom: 13rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 .container-btn-principales{
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 3rem;
     justify-content: center;
+    align-items: center;
     margin-top: 5.5rem;
+    background-color: #171A21;
+    padding: 3rem;
+    width: 60%;
+    margin-top: 4rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+.container-btn-principales > div{
+    width: 100%;
+}
+
 .container-btn-principales a{
-    background-color: #4CAF50;     
-    color: white;               
-    border: none;
+    display: inline-block;
+    width: 100%;
+    background-color: #617073;     
+    color: #fff;          
+    border: none;  
     text-decoration: none;
     padding: 12px 24px;
     font-size: 16px;
@@ -48,7 +70,7 @@ h1{
     transition: background-color 0.3s;
 }
 .container-btn-principales a:hover{
-    background-color: #45a049;  
+    background-color: #57737a;  
 }
 
 
@@ -76,13 +98,26 @@ h1{
     gap: 3rem;
     margin-top: 1rem;
     color:  #2F2F2F;
+    flex-direction: column;
+}
+
+.container-inputs-alta:has(input){
+    gap: 2rem;
+}
+
+.container-inputs-alta + .container-inputs-alta {
+  margin-top: 2rem;
+}
+
+.form-alta{
+    width: 100%;
 }
 
 .form-alta label{
     margin-right: 0.5rem;
 }
 .form-alta input[type="submit"]{
-    width: 10rem;
+    width: 100%;
     margin-top: 3rem;
     padding: 0.5rem;
     background-color: #343A40;  
@@ -102,11 +137,14 @@ h1{
 }
 
 
+
+
 /* Mostrar Mascotas */
 
 .container-mostra-amos{
     display: flex;
     height: 80vh;
+    border-radius: 20px;
 }
 
 .seleccion{
@@ -117,12 +155,28 @@ h1{
     flex-direction: column;
     gap: 2.5rem;
     box-sizing: content-box;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.titulo-mostrar{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.seleccion h2{
+    text-align: center;
 }
 
 .seleccion select{
     font-size: 1rem;
-    padding: 0.5rem 1rem;
     margin-right: 0.5rem;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 12px 15px 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .seleccion input[type = "submit"]{
@@ -137,19 +191,10 @@ h1{
 
 .tabla-datos-amos{
     background-color: #45a049;
-    width: 100%  
+    width: 100%  ;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
-.container-datos{
-    width: 50%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 2.5rem;
-}
-
 
 .registros{
     
@@ -166,7 +211,7 @@ h1{
 }
 
 .registros p , .encabezado p{
-flex: 1; /* o podés usar flex-basis: 150px */
+flex: 1; 
   text-align: center;
 }
 
@@ -212,7 +257,7 @@ table {
     border-collapse: collapse;
 }
 
-    thead {
+thead {
     background-color: #4CAF50;
     color: white;
 }
@@ -223,7 +268,9 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
-
+.tr-datos{
+    background-color: #fff;
+}
 
 .form-modificar input[type = "submit"]{
 
@@ -236,6 +283,29 @@ th, td {
     flex-direction: column;
 }
 
+.container-error select{
+  appearance: none;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 12px 40px 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.container-error select:focus {
+  border-color: #6a67ce;
+  outline: none;
+  box-shadow: 0 0 5px rgba(106, 103, 206, 0.5);
+}
+
 .mensajeError{
     font-size: 13px;
     color: red;
@@ -243,8 +313,78 @@ th, td {
 
 .container-input{
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin: auto;
+    text-align: left;
 }
 
 .inputForm{
-    max-width: 10rem;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.container-body-landing{
+    background-color: #7A93AC;
+    height: 100%;
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.container-btn-acceder{
+    z-index: 10;
+}
+
+.btn-acceder{
+    background-color: #CBEAF5;  
+    color: #3d3c29;             
+    border: none;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-acceder:hover {
+    background-color: #A0D3EB 
+}
+
+
+.container-info-landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 12rem;
+}
+
+.container-landing{
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.container-img-landing img{
+    position: absolute;
+    top: 120px;
+    left: 39.5%;
+    margin-top: 1rem;
+    width: 25rem;
+}
+
+.container-info-landing p{
+    color: #fff;
+}
+.container-info-landing h3{
+    color: #fff;
 }

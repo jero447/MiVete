@@ -1,19 +1,22 @@
-<body>
-    <div class="container-menu">
-        <h1>Bienvenido a Mi Veterinaria</h1>
-        <div class="container-btn-principales">
-            <div>
-                <a href="<?= site_url("seleccionAlta") ?>">Dar de alta</a>
+
+<div class="container-body-landing">
+    <div class="container-landing">
+        <div class="container-info-landing">
+            <div class="landing-text">
+                <h1>¡Bienvenido a Patitas!</h1>
+                <h3>Sistema de gestión clínica veterinaria </h3>
             </div>
-            <div>
-                <a href="<?= site_url("seleccionBaja") ?>">Dar de baja</a>
+            <div class="container-img-landing">
+                <img src="<?= base_url("public/imagenes/grupo-mascotas-sonrientes-lindas.png") ?>" alt="">
             </div>
-            <div>
-                <a href="<?= site_url("pantallaEleccionModificar") ?>">Modificar</a>
-            </div>
-            <div>
-                <a href="<?= site_url("pantallaEleccionMostrar") ?>">Mostrar</a>
+            <div class="container-btn-acceder">
+                <a href="<?= site_url("menuPrincipal") ?>" class="btn-acceder">Acceder</a>
             </div>
         </div>
+
+        
     </div>
-</body>
+</div>
+
+
+

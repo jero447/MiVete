@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->get('/', 'Home::index');
+$routes->get('/menuPrincipal', 'Home::pantallaMenuPrincipal');
 $routes->get('/seleccionAlta', 'Alta::seleccionAlta');
 $routes->get('/pantallaAmoAlta', 'Alta::pantallaAmoAlta');
 $routes->get('/pantallaMascota', 'Alta::pantallaMascotaAlta');

@@ -5,31 +5,40 @@
              <?= form_open("darDeBajaRelacionAmoMascota", ['class' => 'form-alta', "method" => "post"]) ?>
                 <div class="container-inputs-alta">
 
-                    <div>
+                    <div class="container-input">
                         <?= form_label("Mascotas:","mascotas") ?>
-                        <select name="mascotas" id="select-mascota">
-                            <option value="" selected disabled>Seleccione una mascota</option>
-                            <?php  foreach ($mascotas as $mascota):  ?>
-                                <option value="<?= $mascota["idMascotas"] ?>">
-                                    <?= $mascota["nombre"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
+                        <div class="container-error">
+                            <select name="mascotas" id="select-mascota">
+                                <option value="" selected disabled>Seleccione una mascota</option>
+                                <?php  foreach ($mascotas as $mascota):  ?>
+                                    <option value="<?= $mascota["idMascotas"] ?>">
+                                        <?= $mascota["nombre"] ?>
+                                    </option>
+                                <?php endforeach ?>
+                            </select>
+                        </div>
                     </div>
 
-                    <div>
+                    <div class="container-input">
                         <?= form_label("Amos:","amos") ?>
-                        <select name="amos" id="select-amos">
-                            <option value="" selected disabled>Selecciona un amo</option>
-                        </select>
+                        <div class="container-error">
+                            <select name="amos" id="select-amos">
+                                <option value="" selected disabled>Selecciona un amo</option>
+                            </select>
+                        </div>
+                        
                     </div>
 
-                    <div>
+                    <div class="container-input">
                         <?= form_label("Motivo", "motivo")?>
-                        <select name="motivo">
-                            <option value="fallecimiento">Fallecimiento</option>
-                            <option value="vendida">Vendida</option>
-                        </select>
+                        <div class="container-error">
+                            <select name="motivo">
+                                <option value="" selected disabled>Seleccione un motivo</option>
+                                <option value="fallecimiento">Fallecimiento</option>
+                                <option value="vendida">Vendida</option>
+                            </select>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="container-btn-enviar">

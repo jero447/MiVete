@@ -10,5 +10,10 @@ class Home extends BaseController
         echo view("home");
     }
     
+    public function pantallaMenuPrincipal(){
+        echo view("layouts/head");
+        echo view("menuPrincipal");
+    }
+
 
 }

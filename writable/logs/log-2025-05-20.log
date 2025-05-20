@@ -1,0 +1,139 @@
+CRITICAL - 2025-05-20 21:16:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\MascotaModel.php(78): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Baja.php(54): App\Models\MascotaModel->actualizarMascota(null, [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:48:14 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:48:19 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:49:40 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:49:44 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:49:49 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:53:38 --> ErrorException: Undefined array key "fechaAlta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fechaAlta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:56:13 --> ErrorException: Undefined array key "fechaAlta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fechaAlta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:56:32 --> ErrorException: Undefined variable $amos
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:56:36 --> ErrorException: Undefined array key "fechaAlta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fechaAlta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

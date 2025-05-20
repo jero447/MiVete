@@ -4,11 +4,17 @@
             <h1 class="titulo-alta">Selecciona la mascota a modificar</h1>
             <?= form_open("pantallaMascotasModificar", ['class' => 'form-alta form-modificar', "method" => "post"]) ?>
                 <div class="container-inputs-alta">
-                    <select name="mascotaModificar">
-                        <?php foreach($mascotas as $mascota): ?>
-                            <option value="<?= $mascota["idMascotas"] ?>"><?= $mascota["nombre"] ?></option>
-                        <?php endforeach ?>   
-                    </select>
+                    <div class="container-input">
+                        <div class="container-error">
+                            <select name="mascotaModificar">
+                                <?php foreach($mascotas as $mascota): ?>
+                                    <option value="<?= $mascota["idMascotas"] ?>"><?= $mascota["nombre"] ?></option>
+                                <?php endforeach ?>   
+                            </select>
+                        </div>
+                        
+                    </div>
+                    
                     <?= form_submit("enviar", "Seleccionar") ?>
                 </div>
             <?= form_close() ?>

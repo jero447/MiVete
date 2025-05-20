@@ -1,0 +1,94 @@
+CRITICAL - 2025-05-17 21:25:12 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: pantallaAmoAlta]
+in APPPATH\Views\alta\amoAlta.php on line 11.
+ 1 APPPATH\Views\alta\amoAlta.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/amoAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(34): view('alta/amoAlta')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->pantallaAmoAlta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-17 21:30:13 --> ErrorException: Undefined variable $amoModificar
+[Method: POST, Route: modificarAmo]
+in APPPATH\Views\modificar\amoModificar.php on line 9.
+ 1 APPPATH\Views\modificar\amoModificar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amoModificar', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/amoModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(93): view('modificar/amoModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->modificarAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-17 21:30:42 --> ErrorException: Undefined variable $amoModificar
+[Method: POST, Route: modificarAmo]
+in APPPATH\Views\modificar\amoModificar.php on line 27.
+ 1 APPPATH\Views\modificar\amoModificar.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amoModificar', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/amoModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(93): view('modificar/amoModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->modificarAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-17 21:47:36 --> ErrorException: Undefined array key "especie"
+[Method: POST, Route: modificarMascota]
+in APPPATH\Views\modificar\mascotaModificar.php on line 21.
+ 1 APPPATH\Views\modificar\mascotaModificar.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "especie"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\mascotaModificar.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\mascotaModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/mascotaModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(139): view('modificar/mascotaModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->modificarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-17 21:48:02 --> ErrorException: Undefined variable $mascotaModificar
+[Method: POST, Route: modificarMascota]
+in APPPATH\Views\modificar\mascotaModificar.php on line 55.
+ 1 APPPATH\Views\modificar\mascotaModificar.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mascotaModificar', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\mascotaModificar.php', 55)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\mascotaModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/mascotaModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(139): view('modificar/mascotaModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->modificarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-17 23:08:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "landingPage.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('landingPage.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('landingPage', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('landingPage')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-17 23:08:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "landingPage.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('landingPage.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('landingPage', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('landingPage')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

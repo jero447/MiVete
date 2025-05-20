@@ -1,6 +1,6 @@
 <body>
     <div class="container-menu">
-        <h1>Selecciona que quieras dar de alta</h1>
+        <h1 class="titulosSecciones">Selecciona que quieras dar de alta</h1>
         <div class="container-btn-principales">
             <div>
                 <a href="<?= site_url("pantallaParAmoMascota") ?>">Par Amo-Mascota</a>

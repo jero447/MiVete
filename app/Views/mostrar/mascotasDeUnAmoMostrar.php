@@ -1,5 +1,5 @@
 <div class="container-datos">
-    <h1>Mostrar mascotas de un amo</h1>
+    <h1 class="titulo-mostrar">Mostrar mascotas de un amo</h1>
     <div class="container-mostra-amos">
         <div class="seleccion">
 
@@ -29,28 +29,30 @@
 
         <div class="tabla-datos-amos">
             
-            <div class="encabezado">
-                <p>Nombre</p>
-                <p>Especie</p>
-                <p>Raza</p>
-                <p>Nro registro</p>
-                <p>Edad</p>
-                <p>Fecha de alta</p>
-            </div>
-
-            <div>
-                
-                <?php foreach ($mascotasEncotradas as $mascota): ?>
-                    <div class="registros">
-                        <p> <?= $mascota["nombre"] ?> </p>
-                        <p> <?= $mascota["especie"] ?> </p>
-                        <p> <?= $mascota["raza"] ?> </p>
-                        <p> <?= $mascota["nroRegistro"] ?> </p>
-                        <p> <?= $mascota["edad"] ?> </p>
-                        <p> <?= $mascota["fechaAlta"] ?> </p>
-                    </div>
-                <?php endforeach ?>
-            </div>
+           <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Raza</th>
+                        <th>Nro registro</th>
+                        <th>Edad</th>
+                        <th>Fecha de alta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($mascotasEncotradas as $mascota): ?>
+                        <tr class="tr-datos">
+                            <td><?= htmlspecialchars($mascota["nombre"]) ?></td>
+                            <td><?= htmlspecialchars($mascota["especie"]) ?></td>
+                            <td><?= htmlspecialchars($mascota["raza"]) ?></td>
+                            <td><?= htmlspecialchars($mascota["nroRegistro"]) ?></td>
+                            <td><?= htmlspecialchars($mascota["edad"]) ?></td>
+                            <td><?= htmlspecialchars($mascota["fechaAlta"]) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
 
         </div>
 

@@ -55,6 +55,16 @@ class Modificar extends BaseController
             "telefono" => $this->request->getPost("telefono")
         ];
 
+
+        if (!$this->modelVeterinario->validate($data)) {
+            return view("layouts/head")
+                . view("modificar/veterinarioModificar",[
+                    "errors" => $this->modelVeterinario->errors(),
+                    "datos" => $data,
+                ]);
+        }
+
+
         $this->modelVeterinario->actualizarVeterinario($idVeterinarioModificar, $data);
         return redirect()->to("/");
     }
@@ -86,6 +96,18 @@ class Modificar extends BaseController
             "direccion" => $this->request->getPost("direccion"),
             "telefono" => $this->request->getPost("telefono")
         ];
+
+
+        if (!$this->modelAmo->validate($data)) {
+            return view("layouts/head")
+                . view("modificar/amoModificar", [
+                    "errors" => $this->modelAmo->errors(),
+                    "datos" => $data,
+                    "amos" => $this->modelAmo->obtenerAmos(), 
+                    "mascotas" => $this->modelMascota->obtenerMascotas() 
+                ]);
+        }
+
 
         $this->modelAmo->actualizarAmo($idAmoModificar, $data);
         return redirect()->to("/");
@@ -120,6 +142,16 @@ class Modificar extends BaseController
             "nroRegistro" => $this->request->getPost("nro_registro"),
             "edad" => $this->request->getPost("edad")
         ];
+
+
+        if (!$this->modelMascota->validate($data)) {
+            return view("layouts/head")
+                . view("modificar/mascotaModificar", [
+                    "errors" => $this->modelMascota->errors(),
+                    "datos" => $data,
+                ]);
+        }
+
 
         $this->modelMascota->actualizarMascota($idMascotaModificar, $data);
         return redirect()->to("/");

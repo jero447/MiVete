@@ -1,5 +1,5 @@
 <div class="container-datos">
-    <h1>Mostrar amos de una mascota</h1>
+    <h1 class="titulo-mostrar">Mostrar amos de una mascota</h1>
     <div class="container-mostra-amos">
         <div class="seleccion">
 
@@ -29,24 +29,27 @@
 
         <div class="tabla-datos-amos">
             
-            <div class="encabezado">
-                <p>Nombre</p>
-                <p>Direccion</p>
-                <p>Telefono</p>
-            </div>
 
-            <div>
-                
-                <?php foreach ($amosEncontrados as $amo): ?>
-                    <div class="registros">
-                        <p> <?= $amo["nombre"] ?> </p>
-                        <p> <?= $amo["direccion"] ?> </p>
-                        <p> <?= $amo["telefono"] ?> </p>
-                    </div>
-                <?php endforeach ?>
-            </div>
-
-        </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Fecha de alta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($amosEncontrados as $amo): ?>
+                            <tr class="tr-datos">
+                                <td><?= htmlspecialchars($amo["nombre"]) ?></td>
+                                <td><?= htmlspecialchars($amo["direccion"]) ?></td>
+                                <td><?= htmlspecialchars($amo["telefono"]) ?></td>
+                                <td><?= htmlspecialchars($amo["fechaAlta"]) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>    
 
     </div>
 

@@ -1,11 +1,13 @@
 <body>
     <div class="container-menu">
         <div class="container-form">
-            <h1 class="titulo-alta">Dar de alta a un par amo-mascota</h1>
+            <h1 class="titulo-alta">Alta amo-mascota</h1>
             <?= form_open("insertarParAmoMascota", ['class' => 'form-alta', "method" => "post"]) ?>
             <div class="container-inputs-alta">
                 <div class="container-input">
-                        <?= form_label("Amos:","amos") ?>
+                        <div>
+                            <?= form_label("Amos:","amos") ?>
+                        </div>
                         <div class="container-error">
                             <select name="amos">
                                 <option value="" selected disabled>Seleccione algun amo</option>
