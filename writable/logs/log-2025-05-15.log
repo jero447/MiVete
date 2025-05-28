@@ -1,0 +1,154 @@
+DEBUG - 2025-05-15 02:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 02:56:47 --> ErrorException: Undefined variable $errores
+[Method: GET, Route: pantallaAmoAlta]
+in APPPATH\Views\alta\amoAlta.php on line 10.
+ 1 APPPATH\Views\alta\amoAlta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errores', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/amoAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(34): view('alta/amoAlta')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->pantallaAmoAlta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 02:57:08 --> ErrorException: Undefined variable $errors
+[Method: GET, Route: pantallaAmoAlta]
+in APPPATH\Views\alta\amoAlta.php on line 10.
+ 1 APPPATH\Views\alta\amoAlta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errors', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/amoAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(34): view('alta/amoAlta')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->pantallaAmoAlta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 02:58:17 --> ErrorException: Undefined variable $errors
+[Method: GET, Route: pantallaAmoAlta]
+in APPPATH\Views\alta\amoAlta.php on line 10.
+ 1 APPPATH\Views\alta\amoAlta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errors', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/amoAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(34): view('alta/amoAlta')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->pantallaAmoAlta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 02:58:21 --> ErrorException: Undefined variable $errors
+[Method: GET, Route: pantallaAmoAlta]
+in APPPATH\Views\alta\amoAlta.php on line 10.
+ 1 APPPATH\Views\alta\amoAlta.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $errors', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/amoAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(34): view('alta/amoAlta')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->pantallaAmoAlta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 02:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 02:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 03:34:32 --> ErrorException: Attempt to read property "errno" on bool
+[Method: POST, Route: insertarMascota]
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 610.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(610): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "errno" on bool', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\system\\Database\\MySQLi\\Connection.php', 610)
+ 2 SYSTEMPATH\Model.php(576): CodeIgniter\Database\MySQLi\Connection->error()
+ 3 SYSTEMPATH\BaseModel.php(1253): CodeIgniter\Model->doErrors()
+ 4 APPPATH\Controllers\Alta.php(91): CodeIgniter\BaseModel->errors()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarMascota()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 21:47:17 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\VeterinarioModel::getInsertRules
+[Method: POST, Route: insertarVeterinario]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Alta.php(109): CodeIgniter\Model->__call('getInsertRules', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarVeterinario()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 21:55:30 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: pantallaAmoAlta]
+in APPPATH\Views\alta\amoAlta.php on line 11.
+ 1 APPPATH\Views\alta\amoAlta.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\amoAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/amoAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(34): view('alta/amoAlta')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->pantallaAmoAlta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 21:57:45 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: pantallaMascota]
+in APPPATH\Views\alta\mascotaAlta.php on line 15.
+ 1 APPPATH\Views\alta\mascotaAlta.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\mascotaAlta.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\mascotaAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/mascotaAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(39): view('alta/mascotaAlta')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->pantallaMascotaAlta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 21:58:21 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: pantallaMascota]
+in APPPATH\Views\alta\mascotaAlta.php on line 15.
+ 1 APPPATH\Views\alta\mascotaAlta.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\mascotaAlta.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\mascotaAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/mascotaAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(39): view('alta/mascotaAlta')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->pantallaMascotaAlta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 22:27:00 --> ErrorException: Undefined variable $amos
+[Method: POST, Route: insertarParAmoMascota]
+in APPPATH\Views\alta\relacionAmoMascotaAlta.php on line 11.
+ 1 APPPATH\Views\alta\relacionAmoMascotaAlta.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\relacionAmoMascotaAlta.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\relacionAmoMascotaAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/relacionAmoMascotaAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(136): view('alta/relacionAmoMascotaAlta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 22:28:11 --> ErrorException: Undefined variable $amos
+[Method: POST, Route: insertarParAmoMascota]
+in APPPATH\Views\alta\relacionAmoMascotaAlta.php on line 11.
+ 1 APPPATH\Views\alta\relacionAmoMascotaAlta.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\relacionAmoMascotaAlta.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\alta\\relacionAmoMascotaAlta.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('alta/relacionAmoMascotaAlta', [], true)
+ 5 APPPATH\Controllers\Alta.php(136): view('alta/relacionAmoMascotaAlta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

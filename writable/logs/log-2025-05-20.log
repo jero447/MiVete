@@ -1,0 +1,205 @@
+CRITICAL - 2025-05-20 21:16:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: darDeBajaRelacionAmoMascota]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\MascotaModel.php(78): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Baja.php(54): App\Models\MascotaModel->actualizarMascota(null, [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->eliminarParAmoMascota()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:48:14 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:48:19 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:49:40 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:49:44 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:49:49 --> ErrorException: Undefined array key "fecha_alta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fecha_alta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:53:38 --> ErrorException: Undefined array key "fechaAlta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fechaAlta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:56:13 --> ErrorException: Undefined array key "fechaAlta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fechaAlta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:56:32 --> ErrorException: Undefined variable $amos
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amos', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 21:56:36 --> ErrorException: Undefined array key "fechaAlta"
+[Method: POST, Route: buscarMascotas]
+in APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php on line 48.
+ 1 APPPATH\Views\mostrar\amosDeUnaMascotaMostrar.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fechaAlta"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php', 48)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\amosDeUnaMascotaMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/amosDeUnaMascotaMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(49): view('mostrar/amosDeUnaMascotaMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarMascota()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-20 22:31:59 --> mysqli_sql_exception: Duplicate entry '1234' for key 'nroRegistro' in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Topicos\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Topicos\app\Models\MascotaModel.php(63): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Alta.php(96): App\Models\MascotaModel->insertarMascota(Array)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Alta->insertarMascota()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+#11 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-20 22:31:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1234' for key 'nroRegistro'
+[Method: POST, Route: insertarMascota]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mascotas` (`nombre`, `especie`, `raza`, `nroRegistro`, `edad`) VALUES (:nombre:, :especie:, :raza:, :nroRegistro:, :edad:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\MascotaModel.php(63): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Alta.php(96): App\Models\MascotaModel->insertarMascota([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 22:31:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1234' for key 'nroRegistro'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mascotas` (`nombre`, `especie`, `raza`, `nroRegistro`, `edad`) VALUES (\'Mascota prueba\', \'prueba\', \'prueba\', \'1234\', \'4\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mascotas` (`nombre`, `especie`, `raza`, `nroRegistro`, `edad`) VALUES (\'Mascota prueba\', \'prueba\', \'prueba\', \'1234\', \'4\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mascotas` (`nombre`, `especie`, `raza`, `nroRegistro`, `edad`) VALUES (:nombre:, :especie:, :raza:, :nroRegistro:, :edad:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\MascotaModel.php(63): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Alta.php(96): App\Models\MascotaModel->insertarMascota([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarMascota()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 22:31:59 --> [Caused by] mysqli_sql_exception: Duplicate entry '1234' for key 'nroRegistro'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `mascotas` (`nombre`, `especie`, `raza`, `nroRegistro`, `edad`) VALUES (\'Mascota prueba\', \'prueba\', \'prueba\', \'1234\', \'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mascotas` (`nombre`, `especie`, `raza`, `nroRegistro`, `edad`) VALUES (\'Mascota prueba\', \'prueba\', \'prueba\', \'1234\', \'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mascotas` (`nombre`, `especie`, `raza`, `nroRegistro`, `edad`) VALUES (\'Mascota prueba\', \'prueba\', \'prueba\', \'1234\', \'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mascotas` (`nombre`, `especie`, `raza`, `nroRegistro`, `edad`) VALUES (:nombre:, :especie:, :raza:, :nroRegistro:, :edad:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\MascotaModel.php(63): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Alta.php(96): App\Models\MascotaModel->insertarMascota([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarMascota()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

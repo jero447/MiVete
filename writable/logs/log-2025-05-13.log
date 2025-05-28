@@ -1,0 +1,305 @@
+ERROR - 2025-05-13 03:07:21 --> mysqli_sql_exception: Duplicate entry '2-12-2025-05-13' for key 'uq_amo_mascota' in C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto_Topicos\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `am...', 0)
+#1 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `am...')
+#2 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `am...')
+#3 C:\xampp\htdocs\Proyecto_Topicos\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `am...', Array, false)
+#4 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Proyecto_Topicos\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Proyecto_Topicos\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Proyecto_Topicos\app\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Proyecto_Topicos\app\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota(Array)
+#9 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+#10 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+#11 C:\xampp\htdocs\Proyecto_Topicos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Proyecto_Topicos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Proyecto_Topicos\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-13 03:07:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2-12-2025-05-13' for key 'uq_amo_mascota'
+[Method: POST, Route: insertarParAmoMascota]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 6 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 03:07:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2-12-2025-05-13' for key 'uq_amo_mascota'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 8 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 03:07:21 --> [Caused by] mysqli_sql_exception: Duplicate entry '2-12-2025-05-13' for key 'uq_amo_mascota'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (\'2\', \'12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `amo_mascotas` (`idAmo`, `idMascota`) VALUES (:idAmo:, :idMascota:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\RelacionAmoMascotaModel.php(19): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Alta.php(106): App\Models\RelacionAmoMascotaModel->insertarRelacionAmoMascota([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Alta->insertarParAmoMascota()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alta))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 03:17:07 --> ErrorException: Undefined variable $mascotas
+[Method: GET, Route: pantallaVeterinarioBaja]
+in APPPATH\Views\baja\veterinariosBaja.php on line 12.
+ 1 APPPATH\Views\baja\veterinariosBaja.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mascotas', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\veterinariosBaja.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\veterinariosBaja.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('baja/veterinariosBaja', [], true)
+ 5 APPPATH\Controllers\Baja.php(74): view('baja/veterinariosBaja')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->pantallaVeterinarioBaja()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 03:19:03 --> ErrorException: Undefined variable $veterinarios
+[Method: GET, Route: pantallaVeterinarioBaja]
+in APPPATH\Views\baja\veterinariosBaja.php on line 12.
+ 1 APPPATH\Views\baja\veterinariosBaja.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $veterinarios', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\veterinariosBaja.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\veterinariosBaja.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('baja/veterinariosBaja', [], true)
+ 5 APPPATH\Controllers\Baja.php(74): view('baja/veterinariosBaja')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->pantallaVeterinarioBaja()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 03:19:17 --> ErrorException: Undefined variable $veterinarios
+[Method: GET, Route: pantallaVeterinarioBaja]
+in APPPATH\Views\baja\veterinariosBaja.php on line 12.
+ 1 APPPATH\Views\baja\veterinariosBaja.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $veterinarios', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\veterinariosBaja.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\veterinariosBaja.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('baja/veterinariosBaja', [], true)
+ 5 APPPATH\Controllers\Baja.php(74): view('baja/veterinariosBaja')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->pantallaVeterinarioBaja()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 03:19:40 --> ErrorException: Undefined array key "idMascotas"
+[Method: GET, Route: pantallaVeterinarioBaja]
+in APPPATH\Views\baja\veterinariosBaja.php on line 13.
+ 1 APPPATH\Views\baja\veterinariosBaja.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idMascotas"', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\veterinariosBaja.php', 13)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\baja\\veterinariosBaja.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('baja/veterinariosBaja', [], true)
+ 5 APPPATH\Controllers\Baja.php(74): view('baja/veterinariosBaja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Baja->pantallaVeterinarioBaja()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Baja))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 04:01:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mostrar/MascotasDeUnAmo.php"
+[Method: GET, Route: pantallaMascotaDeUnAmoMostrar]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mostrar/MascotasDeUnAmo.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/MascotasDeUnAmo', [], true)
+ 3 APPPATH\Controllers\Mostrar.php(36): view('mostrar/MascotasDeUnAmo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->pantallaMascotasDeUnAmo()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 04:13:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mostrar/MascotasDeUnAmo.php"
+[Method: POST, Route: buscarAmos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mostrar/MascotasDeUnAmo.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/MascotasDeUnAmo', [], true)
+ 3 APPPATH\Controllers\Mostrar.php(57): view('mostrar/MascotasDeUnAmo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarAmo()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 04:13:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mostrar/MascotasDeUnAmo.php"
+[Method: POST, Route: buscarAmos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mostrar/MascotasDeUnAmo.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/MascotasDeUnAmo', [], true)
+ 3 APPPATH\Controllers\Mostrar.php(57): view('mostrar/MascotasDeUnAmo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarAmo()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 04:14:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mostrar/mascotasDeUnAmo.php"
+[Method: POST, Route: buscarAmos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mostrar/mascotasDeUnAmo.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasDeUnAmo', [], true)
+ 3 APPPATH\Controllers\Mostrar.php(57): view('mostrar/mascotasDeUnAmo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->buscarAmo()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 04:59:22 --> ErrorException: Undefined variable $amo
+[Method: GET, Route: mascotasMostrar]
+in APPPATH\Views\mostrar\mascotasMostrar.php on line 27.
+ 1 APPPATH\Views\mostrar\mascotasMostrar.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amo', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\mostrar\\mascotasMostrar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('mostrar/mascotasMostrar', [], true)
+ 5 APPPATH\Controllers\Mostrar.php(69): view('mostrar/mascotasMostrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mostrar->mostrarMascotas()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mostrar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 16:19:55 --> ErrorException: Undefined variable $amoModificar
+[Method: POST, Route: pantallaModificarAmo]
+in APPPATH\Views\modificar\amoModificar.php on line 9.
+ 1 APPPATH\Views\modificar\amoModificar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $amoModificar', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/amoModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(44): view('modificar/amoModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->pantallaModificarAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 16:26:50 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\AmoModel::modificarAmo
+[Method: POST, Route: modificarAmo]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\Modificar.php(58): CodeIgniter\Model->__call('modificarAmo', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->modificarAmo()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 16:29:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: modificarAmo]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1031): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\AmoModel.php(36): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Modificar.php(58): App\Models\AmoModel->actualizarAmo(null, [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->modificarAmo()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 17:16:20 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: pantallaModificarAmo]
+in APPPATH\Views\modificar\amoModificar.php on line 9.
+ 1 APPPATH\Views\modificar\amoModificar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/amoModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(44): view('modificar/amoModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->pantallaModificarAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 17:16:29 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: pantallaModificarAmo]
+in APPPATH\Views\modificar\amoModificar.php on line 9.
+ 1 APPPATH\Views\modificar\amoModificar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/amoModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(44): view('modificar/amoModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->pantallaModificarAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 19:27:44 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: pantallaModificarAmo]
+in APPPATH\Views\modificar\amoModificar.php on line 9.
+ 1 APPPATH\Views\modificar\amoModificar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/amoModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(44): view('modificar/amoModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->pantallaModificarAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 19:28:26 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: pantallaModificarAmo]
+in APPPATH\Views\modificar\amoModificar.php on line 9.
+ 1 APPPATH\Views\modificar\amoModificar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/amoModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(44): view('modificar/amoModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->pantallaModificarAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 19:28:47 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: pantallaModificarAmo]
+in APPPATH\Views\modificar\amoModificar.php on line 9.
+ 1 APPPATH\Views\modificar\amoModificar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\amoModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/amoModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(44): view('modificar/amoModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->pantallaModificarAmo()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-13 19:55:19 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: pantallaVeterinarioModificar]
+in APPPATH\Views\modificar\veterinarioModificar.php on line 9.
+ 1 APPPATH\Views\modificar\veterinarioModificar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\veterinarioModificar.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\Proyecto_Topicos\\app\\Views\\modificar\\veterinarioModificar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modificar/veterinarioModificar', [], true)
+ 5 APPPATH\Controllers\Modificar.php(44): view('modificar/veterinarioModificar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Modificar->pantallaModificarVeterinario()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Modificar))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
